@@ -44,4 +44,24 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
   - Decrementing
   - Text input + error handling
   - Fakestore returns valid data
-  - Doesn't need to test navigation (already tested by react router team)
+
+## TODO
+
+- [x] init project
+- [x] set up routes
+- [x] set up catch-all page not found route
+- [ ] set up tailwind
+- [ ] style navigation component
+- [ ] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
+- [ ] implement navigation to pass tests
+- [ ] write tests for home 
+- [ ] implement home
+- [ ] test/implement Product component
+  - [ ] write tests for inc/dec buttons
+  - [ ] implement inc/dec buttons
+  - [ ] write tests for text input
+  - [ ] implement text input
+  - [ ] write tests for add to cart
+  - [ ] implement add to cart
+  - [ ] write tests for fetching from Fakestore API and displaying picture + title
+  - [ ] implement fetching from Fakestore API and displaying picture + title
