@@ -5,6 +5,8 @@ import Root from './routes/root';
 import PageNotFound from './routes/page-not-found';
 import Home from './routes/home';
 import Shop from './routes/shop';
+import './tailwind.css';
+
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
