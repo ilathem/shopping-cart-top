@@ -51,6 +51,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] set up routes
 - [x] set up catch-all page not found route
 - [x] set up tailwind
+- [x] style overall page layout
 - [ ] style navigation component
 - [ ] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
 - [ ] implement navigation to pass tests

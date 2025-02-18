@@ -1,6 +1,6 @@
 export default function Nav() {
   return (
-    <div>
+    <div className="">
       <p>Navigation</p>
     </div>
   )

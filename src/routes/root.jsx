@@ -3,7 +3,7 @@ import Nav from "../components/nav";
 
 export default function Root() {
   return (
-    <div>
+    <div className="bg-zinc-900 text-zinc-400 h-screen font-[Inter] text-xl">
       <Nav />
       <main>
         <Outlet />
