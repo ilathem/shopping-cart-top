@@ -50,7 +50,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] init project
 - [x] set up routes
 - [x] set up catch-all page not found route
-- [ ] set up tailwind
+- [x] set up tailwind
 - [ ] style navigation component
 - [ ] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
 - [ ] implement navigation to pass tests
