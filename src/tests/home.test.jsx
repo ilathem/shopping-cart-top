@@ -23,4 +23,8 @@ describe('Home component', () => {
   it('displays author', () => {
     expect(screen.getByText('Isaiah Lathem'));
   })
+
+  it('has a link to the repo', () => {
+    expect(screen.getByRole('link', {name: /repo/i})).toHaveAttribute('href', 'https://github.com/ilathem/shopping-cart-top');
+  } )
 })
