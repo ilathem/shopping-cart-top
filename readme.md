@@ -53,8 +53,8 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] set up tailwind
 - [x] style overall page layout
 - [x] style navigation component
-- [ ] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
-- [ ] implement navigation to pass tests
+- [x] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
+- [x] implement navigation to pass tests
 - [ ] write tests for home 
 - [ ] implement home
 - [ ] test/implement Product component
