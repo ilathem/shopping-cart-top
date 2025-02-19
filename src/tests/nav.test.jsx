@@ -39,4 +39,18 @@ describe('Nav component', () => {
 
     expect(screen.getByRole('heading').textContent).toMatch(/Shop/); // Assert
   });
+  
+  it('navigating to home shows home as active page', async () => {
+    await userEvent.click(screen.getByRole('link', { name: /Home/ }));
+
+    expect(screen.getByRole('link', { name: /Home/ }).className).toContain('text-zinc-200')
+    expect(screen.getByRole('link', { name: /Shop/ }).className).not.toContain('text-zinc-200')
+  })
+
+  it('navigating to shop shows shop as active page', async () => {
+    await userEvent.click(screen.getByRole('link', { name: /Shop/ }));
+
+    expect(screen.getByRole('link', { name: /Shop/ }).className).toContain('text-zinc-200')
+    expect(screen.getByRole('link', { name: /Home/ }).className).not.toContain('text-zinc-200')
+  })
 });
