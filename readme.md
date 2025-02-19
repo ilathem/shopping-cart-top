@@ -55,7 +55,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] style navigation component
 - [x] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
 - [x] implement navigation to pass tests
-- [ ] write tests for home 
+- [x] write tests for home 
 - [ ] implement home
 - [ ] test/implement Product component
   - [ ] write tests for inc/dec buttons
