@@ -4,10 +4,10 @@ export default function Nav() {
       <h1 className='text-3xl border-b-3 border-zinc-700'>Navigation</h1>
       <ul >
         <li className='active:scale-90 text-2xl border-2 hover:border-zinc-500 border-zinc-700 cursor-pointer transition-all rounded-md my-2'>
-          Home
+          <a href="#">Home</a>
         </li>
         <li className='active:scale-90 text-2xl border-2 hover:border-zinc-500 border-zinc-700 cursor-pointer transition-all rounded-md my-2'>
-          Shop
+          <a href="#">Shop</a>
         </li>
       </ul>
     </div>
