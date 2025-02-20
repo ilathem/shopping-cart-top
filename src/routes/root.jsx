@@ -5,7 +5,7 @@ export default function Root() {
   return (
     <div className="bg-zinc-900 text-zinc-400 h-screen font-[Inter] text-xl flex flex-row">
       <Nav />
-      <main>
+      <main className="w-full">
         <Outlet />
       </main>
     </div>

@@ -2,7 +2,7 @@ import { NavLink } from 'react-router';
 
 export default function Nav() {
   return (
-    <div className='border-2 border-red w-64 m-5 rounded-2xl p-4 text-center'>
+    <div className='border-2 w-64 m-5 rounded-2xl p-4 text-center'>
       <h2 className='text-3xl border-b-3 border-zinc-700'>Navigation</h2>
       <ul>
         <NavLink
