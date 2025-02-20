@@ -13,7 +13,7 @@ beforeEach(() => { // Arrange in context of route component
 
 describe('Nav component', () => {
   it('renders correct heading', () => {
-    expect(screen.getByRole('paragraph').textContent).toMatch(/Navigation/);
+    expect(screen.getByRole('heading', { name: /nav/i }).textContent).toMatch(/Navigation/);
   });
 
   it('renders home link', () => {
