@@ -17,11 +17,11 @@ describe('Home component', () => {
   })
   
   it('displays greeting component', () => {
-    expect(screen.getByText('Welcome'));
+    expect(screen.getByText(/Welcome/));
   })
 
   it('displays author', () => {
-    expect(screen.getByText('Isaiah Lathem'));
+    expect(screen.getByText(/Isaiah Lathem/));
   })
 
   it('has a link to the repo', () => {
