@@ -58,6 +58,8 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] write tests for home 
 - [x] implement home
 - [ ] test/implement Product component
+  - [ ] code and style UI for product component (with placeholders)
+  - [ ] implement template tests for product UI 
   - [ ] write tests for inc/dec buttons
   - [ ] implement inc/dec buttons
   - [ ] write tests for text input
