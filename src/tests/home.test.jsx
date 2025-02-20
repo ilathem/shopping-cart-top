@@ -3,6 +3,7 @@ import { describe, it, expect, beforeEach } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { RouterProvider, createMemoryRouter } from 'react-router';
 import routesConfig from '../routes/routesConfig';
+import Home from '../routes/home';
 
 beforeEach(() => { // Arrange in context of route component 
   const router = createMemoryRouter(routesConfig, {
@@ -27,4 +28,9 @@ describe('Home component', () => {
   it('has a link to the repo', () => {
     expect(screen.getByRole('link', {name: /repo/i})).toHaveAttribute('href', 'https://github.com/ilathem/shopping-cart-top');
   } )
+  
+  it('renders snapshot correctly', () => {
+    const { container } = render(<Home />)
+    expect(container).toMatchSnapshot();
+  })
 })

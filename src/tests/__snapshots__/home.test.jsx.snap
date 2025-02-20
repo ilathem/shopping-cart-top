@@ -1,0 +1,52 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Home component > renders snapshot correctly 1`] = `
+<div>
+  <div
+    class="m-5 border-2 p-4 rounded-2xl ml-0"
+  >
+    <h1
+      class="text-4xl border-b-3 border-zinc-600 pb-1 mb-2"
+    >
+      Home page
+    </h1>
+    <div>
+      <section
+        class="p-2 border-2 border-zinc-700/50 my-2 rounded-xl hover:border-zinc-700 transition-all"
+      >
+        <p
+          class="text-2xl"
+        >
+          Welcome to the shopping cart app!
+        </p>
+        <p>
+          Created by Isaiah Lathem
+        </p>
+      </section>
+      <section
+        class="p-2 my-2 border-2 rounded-xl border-zinc-700/50 hover:border-zinc-700 transition-all"
+      >
+        <p>
+          How to use:
+        </p>
+        <p>
+          Click "Shop" in the Nav to navigate to the shop page, then add various items to the cart by updating their quantity and clicking Add to Cart.
+        </p>
+      </section>
+      <section
+        class="p-2 my-2 border-2 rounded-xl border-zinc-700/50 hover:border-zinc-700 transition-all"
+      >
+        <p>
+          <a
+            class="hover:text-zinc-200 transition-all"
+            href="https://github.com/ilathem/shopping-cart-top"
+            target="_blank"
+          >
+            Click here to visit the GitHub repo
+          </a>
+        </p>
+      </section>
+    </div>
+  </div>
+</div>
+`;
