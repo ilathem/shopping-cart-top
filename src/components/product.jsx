@@ -34,6 +34,7 @@ export default function Product({ link }) {
               -1
             </button>
             <input
+              aria-label='quantity-input'
               id='quantity-input'
               type='number'
               className='border-zinc-600 hover:border-zinc-500 transition-all border-2 rounded-md w-20 p-1 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none'
@@ -41,7 +42,7 @@ export default function Product({ link }) {
             />
             <button
               title='Increment the quantity'
-              aria-label='quantity-decrement'
+              aria-label='quantity-increment'
               className='active:scale-90 border-2 border-zinc-600 hover:border-zinc-500 hover:text-zinc-300 cursor-pointer select-none transition-all py-1 px-4 rounded-md'
             >
               +1
@@ -49,6 +50,7 @@ export default function Product({ link }) {
           </div>
         </div>
         <button
+          aria-label='quantity-submit'
           type='submit'
           className='active:scale-95 shadow-md hover:shadow-lg shadow-zinc-500/50 border-2 rounded-xl border-zinc-600 hover:border-zinc-500 transition-all py-2 px-8 mt-4 cursor-pointer hover:text-zinc-300'
         >
