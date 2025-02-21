@@ -14,7 +14,7 @@ beforeEach(() => { // Arrange in context of route component
 
 describe('Home component', () => {
   it('renders correct heading', () => {
-    expect(screen.getByRole('heading').textContent).toMatch(/Home/); // Assert
+    expect(screen.getByRole('heading', { name: 'page-title' }).textContent).toMatch(/Home/); // Assert
   })
   
   it('displays greeting component', () => {

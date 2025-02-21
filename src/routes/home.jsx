@@ -1,7 +1,7 @@
 export default function Home() {
   return (
     <div className='m-5 border-2 p-4 rounded-2xl ml-0'>
-      <h1 className='text-4xl border-b-3 border-zinc-600 pb-1 mb-2'>
+      <h1 aria-label='page-title' className='text-4xl border-b-3 border-zinc-600 pb-1 mb-2'>
         Home page
       </h1>
       <Greeting />

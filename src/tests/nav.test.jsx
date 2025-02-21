@@ -31,13 +31,13 @@ describe('Nav component', () => {
   it('clicking home navigates to home', async () => {
     await userEvent.click(screen.getByRole('link', { name: /home/i })); // Act
 
-    expect(screen.getByRole('heading').textContent).toMatch(/Home/); // Assert
+    expect(screen.getByRole('heading', { name: 'page-title' }).textContent).toMatch(/Home/); // Assert
   });
 
   it('clicking shop navigates to shop', async () => {
     await userEvent.click(screen.getByRole('link', { name: /shop/i })); // Act
 
-    expect(screen.getByRole('heading').textContent).toMatch(/Shop/); // Assert
+    expect(screen.getByRole('heading', { name: 'page-title' }).textContent).toMatch(/Shop/); // Assert
   });
   
   it('navigating to home shows home as active page', async () => {

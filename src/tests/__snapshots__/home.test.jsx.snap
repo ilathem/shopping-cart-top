@@ -12,31 +12,37 @@ exports[`Home component > renders snapshot correctly 1`] = `
     </h1>
     <div>
       <section
+        aria-label="introduction"
         class="p-2 border-2 border-zinc-700/50 my-2 rounded-xl hover:border-zinc-700 transition-all"
       >
-        <p
+        <h2
+          aria-label="welcome-text"
           class="text-2xl"
         >
           Welcome to the shopping cart app!
-        </p>
-        <p>
+        </h2>
+        <p
+          aria-label="creator"
+        >
           Created by Isaiah Lathem
         </p>
       </section>
       <section
+        aria-label="how-to-use"
         class="p-2 my-2 border-2 rounded-xl border-zinc-700/50 hover:border-zinc-700 transition-all"
       >
-        <p>
+        <h2>
           How to use:
-        </p>
+        </h2>
         <p>
           Click "Shop" in the Nav to navigate to the shop page, then add various items to the cart by updating their quantity and clicking Add to Cart.
         </p>
       </section>
       <section
+        aria-label="repository link"
         class="p-2 my-2 border-2 rounded-xl border-zinc-700/50 hover:border-zinc-700 transition-all"
       >
-        <p>
+        <h2>
           <a
             class="hover:text-zinc-200 transition-all"
             href="https://github.com/ilathem/shopping-cart-top"
@@ -44,7 +50,7 @@ exports[`Home component > renders snapshot correctly 1`] = `
           >
             Click here to visit the GitHub repo
           </a>
-        </p>
+        </h2>
       </section>
     </div>
   </div>
