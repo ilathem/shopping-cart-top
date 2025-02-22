@@ -61,7 +61,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
   - [x] code and style UI for product component (with placeholders)
   - [x] implement style tests for product UI
   - [x] write tests for inc/dec buttons
-  - [ ] implement inc/dec buttons
+  - [x] implement inc/dec buttons
   - [ ] write tests for text input
   - [ ] implement text input
   - [ ] write tests for add to cart
