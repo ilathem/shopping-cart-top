@@ -1,6 +1,25 @@
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 export default function Product({ link }) {
+  const [quantity, setQuantity] = useState("");
+
+  function adjustQuantity(adjustment) {
+    if (adjustment === 1) {
+      setQuantity((prevQuantity) => Number(prevQuantity) + 1);
+    } else if (adjustment === -1) {
+      setQuantity((prevQuantity) => {
+        if (prevQuantity <= 1 || prevQuantity === "") return "";
+        else return Number(prevQuantity) - 1;
+      });
+    }
+  }
+
+  function handleInputChange(incomingValue) {
+    if (incomingValue <= 0) setQuantity("");
+    else setQuantity(incomingValue);
+  }
+
   return (
     <div className="h-min text-center border-zinc-700/50 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-700/50 rounded-xl transition-all p-4 flex flex-col border-2 w-sm items-center">
       <img
@@ -34,20 +53,25 @@ export default function Product({ link }) {
               title="Decrement the quantity"
               aria-label="quantity-decrement"
               className="active:scale-90 border-2 border-zinc-600 hover:border-zinc-500 hover:text-zinc-300 cursor-pointer select-none transition-all py-1 px-4 rounded-md"
+              onClick={() => adjustQuantity(-1)}
             >
               -1
             </button>
             <input
+              placeholder="0"
               aria-label="quantity-input"
               id="quantity-input"
               type="number"
               className="border-zinc-600 hover:border-zinc-500 transition-all border-2 rounded-md w-20 p-1 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               min="0"
+              value={quantity}
+              onChange={(e) => handleInputChange(e.target.value)}
             />
             <button
               title="Increment the quantity"
               aria-label="quantity-increment"
               className="active:scale-90 border-2 border-zinc-600 hover:border-zinc-500 hover:text-zinc-300 cursor-pointer select-none transition-all py-1 px-4 rounded-md"
+              onClick={() => adjustQuantity(1)}
             >
               +1
             </button>
