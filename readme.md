@@ -60,7 +60,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [ ] test/implement Product component
   - [x] code and style UI for product component (with placeholders)
   - [x] implement style tests for product UI
-  - [ ] write tests for inc/dec buttons
+  - [x] write tests for inc/dec buttons
   - [ ] implement inc/dec buttons
   - [ ] write tests for text input
   - [ ] implement text input

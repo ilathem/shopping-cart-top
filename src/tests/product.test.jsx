@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
+import { render, screen, userEvent } from "@testing-library/react";
 // import { RouterProvider, createMemoryRouter } from 'react-router';
 import Product from "../components/product";
 
@@ -28,5 +28,45 @@ describe("Product component UI", () => {
       screen.getByRole("button", { name: "quantity-decrement" }).textContent,
     ).toMatch("-1");
     expect(screen.getByRole("button", { name: "quantity-submit" }));
+  });
+});
+
+describe("Product component functionality", () => {
+  it("increment button increments by one", async () => {
+    console.log("running test...");
+    const user = userEvent.setup();
+    render(<Product />);
+    await user.click(
+      screen.getByRole("button", { name: "quantity-increment" }),
+    );
+    console.log(screen.getByRole("spinbutton", { name: "quantity-input" }));
+    expect(
+      screen.getByRole("spinbutton", { name: "quantity-input" }).value,
+    ).toMatch(1);
+  });
+
+  it("decrement button decrements by one", async () => {
+    const user = userEvent.setup();
+    render(<Product />);
+    await user.click(
+      screen.getByRole("button", { name: "quantity-increment" }),
+    );
+    await user.click(
+      screen.getByRole("button", { name: "quantity-decrement" }),
+    );
+    expect(
+      screen.getByRole("spinbutton", { name: "quantity-input" }).value,
+    ).toMatch("");
+  });
+
+  it("decrement button does not go below zero", async () => {
+    const user = userEvent.setup();
+    render(<Product />);
+    await user.click(
+      screen.getByRole("button", { name: "quantity-decrement" }),
+    );
+    expect(
+      screen.getByRole("spinbutton", { name: "quantity-input" }).value,
+    ).toMatch("");
   });
 });
