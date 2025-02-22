@@ -32,7 +32,8 @@ describe("Nav component", () => {
   });
 
   it("clicking home navigates to home", async () => {
-    await userEvent.click(screen.getByRole("link", { name: /home/i })); // Act
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("link", { name: /home/i })); // Act
 
     expect(
       screen.getByRole("heading", { name: "page-title" }).textContent,
@@ -40,7 +41,8 @@ describe("Nav component", () => {
   });
 
   it("clicking shop navigates to shop", async () => {
-    await userEvent.click(screen.getByRole("link", { name: /shop/i })); // Act
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("link", { name: /shop/i })); // Act
 
     expect(
       screen.getByRole("heading", { name: "page-title" }).textContent,
@@ -48,7 +50,8 @@ describe("Nav component", () => {
   });
 
   it("navigating to home shows home as active page", async () => {
-    await userEvent.click(screen.getByRole("link", { name: /Home/ }));
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("link", { name: /Home/ }));
 
     expect(screen.getByRole("link", { name: /Home/ }).className).toContain(
       "text-zinc-200",
@@ -59,7 +62,8 @@ describe("Nav component", () => {
   });
 
   it("navigating to shop shows shop as active page", async () => {
-    await userEvent.click(screen.getByRole("link", { name: /Shop/ }));
+    const user = userEvent.setup();
+    await user.click(screen.getByRole("link", { name: /Shop/ }));
 
     expect(screen.getByRole("link", { name: /Shop/ }).className).toContain(
       "text-zinc-200",
