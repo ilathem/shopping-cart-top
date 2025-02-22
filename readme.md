@@ -4,6 +4,8 @@ This is a project for [The Odin Project](https://www.theodinproject.com/), an
 open-source web dev curriculum. The link for this specific project can be
 found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart).
 
+Created By Isaiah Lathem.
+
 ## Planning
 
 ### Requirements Specification
