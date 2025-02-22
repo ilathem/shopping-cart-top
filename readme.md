@@ -1,14 +1,14 @@
 # Shopping Cart
 
-This is a project for [The Odin Project](https://www.theodinproject.com/), an 
-open-source web dev curriculum. The link for this specific project can be 
+This is a project for [The Odin Project](https://www.theodinproject.com/), an
+open-source web dev curriculum. The link for this specific project can be
 found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart).
 
 ## Planning
 
 ### Requirements Specification
 
-- Needs at least 2 pages (routes): Home and Shop 
+- Needs at least 2 pages (routes): Home and Shop
 - Shop page includes the shopping cart component
 - Nav bar component that is displayed at all times and shows the number of items in the cart
   - There needs to be a "checkout and pay" button by the number of items in the cart (doesn't do anything yet)
@@ -18,7 +18,7 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
   - Add to cart button
   - Title for each product and picture
   - Fetch data from Fakestore API
-- number of items in cart dynamically changes 
+- number of items in cart dynamically changes
 - no `missing in props validation` errors
 - test thoroughly with react testing library
 - add all styles
@@ -55,11 +55,11 @@ found [here](https://www.theodinproject.com/lessons/node-path-react-new-shopping
 - [x] style navigation component
 - [x] write [tests](https://reactrouter.com/start/framework/testing) for navigation routing
 - [x] implement navigation to pass tests
-- [x] write tests for home 
+- [x] write tests for home
 - [x] implement home
 - [ ] test/implement Product component
   - [x] code and style UI for product component (with placeholders)
-  - [ ] implement style tests for product UI 
+  - [ ] implement style tests for product UI
   - [ ] write tests for inc/dec buttons
   - [ ] implement inc/dec buttons
   - [ ] write tests for text input
