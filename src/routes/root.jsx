@@ -9,5 +9,5 @@ export default function Root() {
         <Outlet />
       </main>
     </div>
-  )
+  );
 }

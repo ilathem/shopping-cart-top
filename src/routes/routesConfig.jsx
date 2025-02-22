@@ -1,11 +1,11 @@
-import PageNotFound from './page-not-found';
-import Root from './root';
-import Home from './home';
-import Shop from './shop';
+import PageNotFound from "./page-not-found";
+import Root from "./root";
+import Home from "./home";
+import Shop from "./shop";
 
 const routesConfig = [
   {
-    path: '/',
+    path: "/",
     element: <Root />,
     children: [
       {
@@ -13,11 +13,11 @@ const routesConfig = [
         element: <Home />,
       },
       {
-        path: '/shop',
+        path: "/shop",
         element: <Shop />,
       },
       {
-        path: '/*',
+        path: "/*",
         element: <PageNotFound />,
       },
     ],
