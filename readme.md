@@ -64,8 +64,8 @@ Created By Isaiah Lathem.
   - [x] implement style tests for product UI
   - [x] write tests for inc/dec buttons
   - [x] implement inc/dec buttons
-  - [ ] write tests for text input
-  - [ ] implement text input
+  - [x] write tests for text input
+  - [x] implement text input
   - [ ] write tests for add to cart
   - [ ] implement add to cart
   - [ ] write tests for fetching from Fakestore API and displaying picture + title
