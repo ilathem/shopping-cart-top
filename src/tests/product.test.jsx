@@ -103,7 +103,7 @@ describe("Product component functionality", () => {
     await user.keyboard("1");
     await user.click(screen.getByRole("button", { name: "quantity-submit" }));
     expect(
-      screen.getByRole("paragraph", { name: "cart-quantity" }).value,
+      screen.getByRole("emphasis", { name: "cart-quantity" }).value,
     ).toMatch("1");
   });
 });
