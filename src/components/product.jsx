@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export default function Product({ link }) {
+export default function Product({ link, addToCart }) {
   const [quantity, setQuantity] = useState("");
 
   function adjustQuantity(adjustment) {
@@ -81,6 +81,7 @@ export default function Product({ link }) {
           aria-label="quantity-submit"
           type="submit"
           className="active:scale-95 shadow-md hover:shadow-lg shadow-zinc-500/50 border-2 rounded-xl border-zinc-600 hover:border-zinc-500 transition-all py-2 px-8 mt-4 cursor-pointer hover:text-zinc-300"
+          onClick={() => addToCart(quantity)}
         >
           Add to cart
         </button>
@@ -91,4 +92,5 @@ export default function Product({ link }) {
 
 Product.propTypes = {
   link: PropTypes.string,
+  addToCart: PropTypes.func,
 };

@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
+import PropTypes from "prop-types";
 
-export default function Nav() {
+export default function Nav({ numCartItems }) {
   return (
     <div className="border-2 w-64 m-5 rounded-2xl p-4 text-center">
       <h2 className="text-3xl border-b-3 border-zinc-700">Navigation</h2>
@@ -27,6 +28,14 @@ export default function Nav() {
           </li>
         </NavLink>
       </ul>
+      <p aria-label="items-in-cart">
+        Number of items in cart:
+        <em aria-label="cart-quantity">{numCartItems}</em>
+      </p>
     </div>
   );
 }
+
+Nav.propTypes = {
+  numCartItems: PropTypes.number,
+};
