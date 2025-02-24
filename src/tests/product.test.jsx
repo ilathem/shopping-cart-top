@@ -93,4 +93,17 @@ describe("Product component functionality", () => {
       screen.getByRole("spinbutton", { name: "quantity-input" }).value,
     ).toMatch("");
   });
+
+  it("clicking add to cart adds specified quantity to cart", async () => {
+    const user = userEvent.setup();
+    render(<Product />);
+    await user.click(
+      screen.getByRole("spinbutton", { name: "quantity-input" }),
+    );
+    await user.keyboard("1");
+    await user.click(screen.getByRole("button", { name: "quantity-submit" }));
+    expect(
+      screen.getByRole("paragraph", { name: "cart-quantity" }).value,
+    ).toMatch("1");
+  });
 });

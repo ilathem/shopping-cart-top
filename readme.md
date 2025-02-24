@@ -66,7 +66,7 @@ Created By Isaiah Lathem.
   - [x] implement inc/dec buttons
   - [x] write tests for text input
   - [x] implement text input
-  - [ ] write tests for add to cart
+  - [x] write tests for add to cart
   - [ ] implement add to cart
   - [ ] write tests for fetching from Fakestore API and displaying picture + title
   - [ ] implement fetching from Fakestore API and displaying picture + title
