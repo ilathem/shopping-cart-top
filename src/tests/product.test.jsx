@@ -1,7 +1,8 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-// import { RouterProvider, createMemoryRouter } from 'react-router';
+import { RouterProvider, createMemoryRouter } from "react-router";
+import routesConfig from "../routes/routesConfig";
 import Product from "../components/product";
 
 describe("Product component UI", () => {
@@ -95,15 +96,18 @@ describe("Product component functionality", () => {
   });
 
   it("clicking add to cart adds specified quantity to cart", async () => {
+    const router = createMemoryRouter(routesConfig, {
+      initialEntries: ["/shop"],
+    });
+    render(<RouterProvider router={router} />);
     const user = userEvent.setup();
-    render(<Product />);
     await user.click(
       screen.getByRole("spinbutton", { name: "quantity-input" }),
     );
     await user.keyboard("1");
     await user.click(screen.getByRole("button", { name: "quantity-submit" }));
     expect(
-      screen.getByRole("emphasis", { name: "cart-quantity" }).value,
+      screen.getByRole("emphasis", { name: "cart-quantity" }).textContent,
     ).toMatch("1");
   });
 });
