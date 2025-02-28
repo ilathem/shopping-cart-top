@@ -1,7 +1,15 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
 
-export default function Product({ link, addToCart }) {
+export default function Product({
+  addToCart,
+  itemData = {
+    image: "",
+    title: "",
+    description: "",
+    price: 0,
+  },
+}) {
   const [quantity, setQuantity] = useState("");
 
   function adjustQuantity(adjustment) {
@@ -24,15 +32,17 @@ export default function Product({ link, addToCart }) {
     <div className="h-min text-center border-zinc-700/50 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-700/50 rounded-xl transition-all p-4 flex flex-col border-2 w-sm items-center">
       <img
         aria-label="product-image"
-        src={link || "https://placehold.co/600x400"}
+        src={itemData.image || "https://placehold.co/600x400"}
         className="mb-2 shadow-lg shadow-zinc-400/50"
       />
       <h3 aria-label="product-title" className="text-2xl">
-        Title
+        {itemData.title}
       </h3>
       <p aria-label="product-description" className="text-sm mb-2">
-        Description Description Description Description Description Description
-        Description
+        {itemData.description}
+      </p>
+      <p aria-label="product-price" className="text-sm mb-2">
+        {itemData.price}
       </p>
       <form
         className="w-full"
@@ -91,6 +101,6 @@ export default function Product({ link, addToCart }) {
 }
 
 Product.propTypes = {
-  link: PropTypes.string,
+  itemData: PropTypes.object,
   addToCart: PropTypes.func,
 };
