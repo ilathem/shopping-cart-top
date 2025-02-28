@@ -59,7 +59,7 @@ Created By Isaiah Lathem.
 - [x] implement navigation to pass tests
 - [x] write tests for home
 - [x] implement home
-- [ ] test/implement Product component
+- [x] test/implement Product component
   - [x] code and style UI for product component (with placeholders)
   - [x] implement style tests for product UI
   - [x] write tests for inc/dec buttons
@@ -70,5 +70,5 @@ Created By Isaiah Lathem.
   - [x] implement add to cart
   - [x] write tests for fetching from Fakestore API and displaying picture + title
   - [x] implement fetching from Fakestore API and displaying picture + title
-  - [ ] style shop with fakestore data
-- [ ] test/implement shop route
+  - [x] style shop with fakestore data
+- [x] test/implement shop route

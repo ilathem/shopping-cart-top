@@ -12,7 +12,7 @@ export default function Root() {
   return (
     <div className="bg-zinc-900 text-zinc-400 h-screen font-[Inter] text-xl flex flex-row">
       <Nav numCartItems={numCartItems} />
-      <main className="w-full">
+      <main className="flex-1 border-2 m-5 ml-0 rounded-2xl p-4 text-center">
         <Outlet context={addToCart} />
       </main>
     </div>

@@ -8,6 +8,7 @@ export default function Product({
     title: "",
     description: "",
     price: 0,
+    id: 0,
   },
 }) {
   const [quantity, setQuantity] = useState("");
@@ -29,20 +30,29 @@ export default function Product({
   }
 
   return (
-    <div className="h-min text-center border-zinc-700/50 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-700/50 rounded-xl transition-all p-4 flex flex-col border-2 w-sm items-center">
+    <div className="text-center border-zinc-700/50 hover:border-zinc-700 hover:shadow-lg hover:shadow-zinc-700/50 rounded-xl transition-all p-4 flex flex-col border-2 justify-between items-center group">
       <img
         aria-label="product-image"
         src={itemData.image || "https://placehold.co/600x400"}
-        className="mb-2 shadow-lg shadow-zinc-400/50"
+        className="mb-2 shadow-lg shadow-zinc-400/50 h-40 w-40"
       />
-      <h3 aria-label="product-title" className="text-2xl">
+      <h3
+        aria-label="product-title"
+        className="text-2xl group-hover:text-zinc-300 transition-colors"
+      >
         {itemData.title}
       </h3>
-      <p aria-label="product-description" className="text-sm mb-2">
+      <p
+        aria-label="product-description"
+        className="text-sm mb-2 group-hover:text-zinc-300 transition-colors"
+      >
         {itemData.description}
       </p>
-      <p aria-label="product-price" className="text-sm mb-2">
-        {itemData.price}
+      <p
+        aria-label="product-price"
+        className="text-lg mb-2 text-lime-700 group-hover:text-lime-500 transition-all"
+      >
+        Price: {itemData.price}
       </p>
       <form
         className="w-full"
@@ -53,8 +63,8 @@ export default function Product({
         <div className="border-zinc-700/50 hover:border-zinc-700 transition-all rounded-xl pb-2 border-2 flex flex-col w-full">
           <label
             aria-label="quantity-input-label"
-            htmlFor="quantity-input"
-            className="text-xl text-center"
+            htmlFor={`quantity-input-${itemData.id}`}
+            className="text-xl text-center group-hover:text-zinc-300 transition-colors"
           >
             Quantity
           </label>
@@ -70,7 +80,7 @@ export default function Product({
             <input
               placeholder="0"
               aria-label="quantity-input"
-              id="quantity-input"
+              id={`quantity-input-${itemData.id}`}
               type="number"
               className="border-zinc-600 hover:border-zinc-500 transition-all border-2 rounded-md w-20 p-1 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               min="0"
