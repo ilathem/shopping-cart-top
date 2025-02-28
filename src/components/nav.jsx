@@ -1,4 +1,4 @@
-import { NavLink } from "react-router";
+import { NavLink } from "react-router-dom";
 import PropTypes from "prop-types";
 
 export default function Nav({ numCartItems }) {

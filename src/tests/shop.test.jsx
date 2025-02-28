@@ -4,7 +4,7 @@ import { beforeAll, afterAll, afterEach } from "vitest";
 import { setupServer } from "msw/node";
 import { http, HttpResponse } from "msw";
 import { render, screen } from "@testing-library/react";
-import { RouterProvider, createMemoryRouter } from "react-router";
+import { RouterProvider, createMemoryRouter } from "react-router-dom";
 import routesConfig from "../routes/routesConfig";
 import { productItems } from "./productTestData";
 

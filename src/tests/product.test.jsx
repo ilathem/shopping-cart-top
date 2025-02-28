@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll, afterEach } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { RouterProvider, createMemoryRouter } from "react-router";
+import { RouterProvider, createMemoryRouter } from "react-router-dom";
 import routesConfig from "../routes/routesConfig";
 import Product from "../components/product";
 import { setupServer } from "msw/node";

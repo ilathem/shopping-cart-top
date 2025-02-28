@@ -1,7 +1,7 @@
 import PageNotFound from "./page-not-found";
 import Root from "./root";
 import Home from "./home";
-import Shop from "./shop";
+import Shop, { loader } from "./shop";
 
 const routesConfig = [
   {
@@ -15,6 +15,7 @@ const routesConfig = [
       {
         path: "/shop",
         element: <Shop />,
+        loader: loader,
       },
       {
         path: "/*",

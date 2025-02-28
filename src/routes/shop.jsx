@@ -1,31 +1,17 @@
-import { useOutletContext } from "react-router";
+import { useOutletContext, useLoaderData } from "react-router-dom";
+import { useState, useEffect } from "react";
 import Product from "../components/product";
-import { useEffect } from "react";
-import { useState } from "react";
+
+// eslint-disable-next-line react-refresh/only-export-components
+export async function loader() {
+  const res = await fetch(`https://fakestoreapi.com/products`);
+  const data = await res.json();
+  return data;
+}
 
 export default function Shop() {
+  const storeData = useLoaderData();
   const addToCart = useOutletContext();
-  const [storeData, setStoreData] = useState();
-
-  console.log(storeData);
-
-  useEffect(() => {
-    if (localStorage.getItem("products")) {
-      setStoreData(JSON.parse(localStorage.getItem("products")));
-    } else {
-      getFakestoreData();
-    }
-  }, []);
-
-  const getFakestoreData = async () => {
-    console.log("getting fakestore data");
-    fetch(`https://fakestoreapi.com/products`).then((res) =>
-      res.json().then((data) => {
-        setStoreData(data);
-        localStorage.setItem("products", JSON.stringify(data));
-      }),
-    );
-  };
 
   return (
     <div>
