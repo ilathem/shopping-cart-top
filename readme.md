@@ -68,6 +68,7 @@ Created By Isaiah Lathem.
   - [x] implement text input
   - [x] write tests for add to cart
   - [x] implement add to cart
-  - [ ] write tests for fetching from Fakestore API and displaying picture + title
-  - [ ] implement fetching from Fakestore API and displaying picture + title
+  - [x] write tests for fetching from Fakestore API and displaying picture + title
+  - [x] implement fetching from Fakestore API and displaying picture + title
+  - [ ] style shop with fakestore data
 - [ ] test/implement shop route
