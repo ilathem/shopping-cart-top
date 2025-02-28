@@ -119,11 +119,11 @@ describe("Product component UI functionality", () => {
 
   it("clicking add to cart adds specified quantity to cart", async () => {
     const router = createMemoryRouter(routesConfig, {
-      initialEntries: ["/"],
+      initialEntries: ["/shop"],
     });
     render(<RouterProvider router={router} />);
     const user = userEvent.setup();
-    await user.click(screen.getByRole("link", { name: "Shop" }));
+    await screen.findAllByText("Product title");
     await user.click(
       screen.getAllByRole("spinbutton", { name: "quantity-input" })[0],
     );

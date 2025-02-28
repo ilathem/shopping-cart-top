@@ -26,11 +26,10 @@ afterEach(() => server.resetHandlers()); // For test isolation
 describe("Shop component api", () => {
   it("correctly calls the api", async () => {
     const router = createMemoryRouter(routesConfig, {
-      initialEntries: ["/"],
+      initialEntries: ["/shop"],
     });
     render(<RouterProvider router={router} />);
-    const user = userEvent.setup();
-    await user.click(screen.getByRole("link", { name: "Shop" }));
+    await screen.findAllByText("Product title");
     expect(
       screen.getAllByRole("heading", { name: "product-title" })[0].textContent,
     ).toMatch("Product title");
