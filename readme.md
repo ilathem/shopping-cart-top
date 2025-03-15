@@ -72,4 +72,4 @@ Created By Isaiah Lathem.
   - [x] implement fetching from Fakestore API and displaying picture + title
   - [x] style shop with fakestore data
 - [x] test/implement shop route
-- [ ] deploy
+- [x] deploy (hosted at https://ornate-belekoy-24829a.netlify.app/)
